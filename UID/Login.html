@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - NAAS</title>
+  <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">NAAS</a>
+    <div class="search-container">
+      <input class="search-input" type="search" placeholder="Search" />
+      <button class="search-btn">🔍</button>
+    </div>
+    <div class="nav-buttons">
+      <button class="wishlist-btn" id="wishlistBtn">❤️</button>
+      <button class="cart-btn" onclick="addToCart()">🛒</button>
+      <a href="Login.html" class="login-btn">👤 Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Login Form -->
+<div class="container main-container">
+  <div class="login-card">
+    <div class="card-body">
+      <h4 class="card-title">Login</h4>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="Enter email" required>
+          <div class="error-message">
+            Please provide a valid email address.
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Password" required minlength="6">
+          <div class="error-message">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="rememberMe">
+          <label for="rememberMe">Remember me</label>
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+      </form>
+      <div class="links-container">
+        <a href="register.html">Don't have an account? Sign Up</a><br>
+        <a href="forgot-password.html">Forgot password?</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal" id="successModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5>Login Successful</h5>
+      <button class="close-btn" onclick="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      You have successfully logged in!
+    </div>
+    <div class="modal-footer">
+      <button class="continue-btn" onclick="redirectToHome()">Continue Shopping</button>
+    </div>
+  </div>
+</div>
+
+<script src="Login.js"></script>
+</body>
+</html>

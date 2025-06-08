@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAAS</title>
+  <link rel="stylesheet" href="Builder.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a class="logo" href="#">NAAS</a>
+    <div class="search-container">
+      <input type="search" placeholder="Search" id="searchInput">
+      <button class="search-btn" onclick="handleSearch()">🔍</button>
+    </div>
+    <div class="nav-buttons">
+      <button class="wishlist-btn" onclick="showLiked()">❤</button>
+      <button class="cart-btn" id="cartButton" onclick="viewCart()">🛒</button>
+      <a href="Builder.html" class="builder-btn">🛠 Builder</a>
+      <a href="Login.html" class="login-btn">👤 Login</a>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Builders Info -->
+<div class="main-container">
+  <h1 class="main-title">Builders Info</h1>
+  <div class="builders-grid">
+    <!-- Builder 1 -->
+    <div class="builder-card">
+      <a href="RESUME.html">
+        <h4>SHRUTHIK BINDURAJ</h4>
+      </a>
+    </div>
+
+    <!-- Builder 2 -->
+    <div class="builder-card">
+      <a href="Naveen.html">
+        <h4>Naveen Raj R</h4>
+      </a>
+    </div>
+
+    <!-- Builder 3 -->
+    <div class="builder-card">
+      <a href="resume1.html">
+        <h4>ABHINAV P MADHU</h4>
+      </a>
+    </div>
+
+    <!-- Builder 4 -->
+    <div class="builder-card">
+      <a href="resume2.html">
+        <h4>Adhithyan S</h4>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 NAAS. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a> | 
+    <a href="#">Terms of Service</a> | 
+    <a href="#">Contact Us</a>
+  </div>
+</footer>
+
+<!-- Cart Modal -->
+<div class="modal" id="cartModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5>Your Cart</h5>
+      <button class="close-btn" onclick="closeModal('cartModal')">×</button>
+    </div>
+    <div class="modal-body" id="cartItemsContainer"></div>
+    <div class="modal-footer">
+      <button class="checkout-btn" onclick="initiatePayment()">Checkout</button>
+      <button class="close-btn" onclick="closeModal('cartModal')">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Liked Items Modal -->
+<div class="modal" id="likedModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5>Liked Products</h5>
+      <button class="close-btn" onclick="closeModal('likedModal')">×</button>
+    </div>
+    <div class="modal-body" id="likedItemsContainer"></div>
+  </div>
+</div>
+
+<script src="Builder.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAAS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="Homepage.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-light shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold fs-4" href="#">NAAS</a>
+
+    <div class="input-group mx-auto" style="max-width: 400px;">
+      <input type="search" placeholder="Search" id="searchInput" class="form-control" />
+      <button class="btn btn-outline-secondary" type="button" onclick="searchProducts()">🔍</button>
+    </div>
+
+    <div class="d-flex gap-2 align-items-center">
+      <button id="wishlistBtn" class="btn btn-outline-danger" onclick="viewWishlist()">❤️</button>
+      <button id="cartButton" class="btn btn-outline-primary" onclick="viewCart()">🛒</button>
+      <a href="Builder.html" class="btn btn-info">Builders Info</a>
+      <a href="Login.html" class="btn btn-secondary">👤 Login</a>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleControls" class="carousel slide my-4 rounded-3 overflow-hidden" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="iphone.jpeg" class="d-block w-100 carousel-img" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img src="wash.jpeg" class="d-block w-100 carousel-img" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img src="camera.jpg" class="d-block w-100 carousel-img" alt="Third slide">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<ul class="nav nav-tabs justify-content-center my-4" id="myTab" role="tablist">
+  <li class="nav-item">
+    <button class="nav-link active" id="clothing-tab" data-bs-toggle="tab" data-bs-target="#clothing" type="button" role="tab" aria-controls="clothing" aria-selected="true">Clothing</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" id="homekitchen-tab" data-bs-toggle="tab" data-bs-target="#homekitchen" type="button" role="tab" aria-controls="homekitchen" aria-selected="false">Home & Kitchen</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" id="appliances-tab" data-bs-toggle="tab" data-bs-target="#appliances" type="button" role="tab" aria-controls="appliances" aria-selected="false">Appliances</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" id="grocery-tab" data-bs-toggle="tab" data-bs-target="#grocery" type="button" role="tab" aria-controls="grocery" aria-selected="false">Grocery</button>
+  </li>
+</ul>
+
+<div class="container tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="clothing" role="tabpanel" aria-labelledby="clothing-tab">
+    <div class="row g-2">
+      <div class="col-6 col-md-4 col-lg-3"><img src="jordan.jpg" class="img-fluid rounded thumbnail-img" alt="Jordan Shoes" onclick="loadProduct(0, 'clothing')"></div>
+      <div class="col-6 col-md-4 col-lg-3"><img src="track.jpeg" class="img-fluid rounded thumbnail-img" alt="Track Pants" onclick="loadProduct(1, 'clothing')"></div>
+      <div class="col-6 col-md-4 col-lg-3"><img src="denim.jpg" class="img-fluid rounded thumbnail-img" alt="Denim Jacket" onclick="loadProduct(2, 'clothing')"></div>
+      <div class="col-6 col-md-4 col-lg-3"><img src="shorts.jpg" class="img-fluid rounded thumbnail-img" alt="Running Shorts" onclick="loadProduct(3, 'clothing')"></div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="homekitchen" role="tabpanel" aria-labelledby="homekitchen-tab">
+    <div class="row g-2">
+      <div class="col-6 col-md-4 col-lg-3"><img src="table.jpg" class="img-fluid rounded thumbnail-img" alt="Dining Table" onclick="loadProduct(4, 'homekitchen')"></div>
+      <div class="col-6 col-md-4 col-lg-3"><img src="sofa.jpg" class="img-fluid rounded thumbnail-img" alt="Sofa Set" onclick="loadProduct(5, 'homekitchen')"></div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="appliances" role="tabpanel" aria-labelledby="appliances-tab">
+    <div class="row g-2">
+      <div class="col-6 col-md-4 col-lg-3"><img src="wash.jpeg" class="img-fluid rounded thumbnail-img" alt="Washing Machine" onclick="loadProduct(6, 'appliances')"></div>
+      <div class="col-6 col-md-4 col-lg-3"><img src="oven.jpg" class="img-fluid rounded thumbnail-img" alt="Microwave Oven" onclick="loadProduct(7, 'appliances')"></div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="grocery" role="tabpanel" aria-labelledby="grocery-tab">
+    <div class="row g-2">
+      <div class="col-6 col-md-4 col-lg-3"><img src="rice.jpg" class="img-fluid rounded thumbnail-img" alt="Rice Bag" onclick="loadProduct(8, 'grocery')"></div>
+      <div class="col-6 col-md-4 col-lg-3"><img src="wheat.jpg" class="img-fluid rounded thumbnail-img" alt="Wheat Bag" onclick="loadProduct(9, 'grocery')"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 mb-3 mb-md-0">
+      <div class="card p-3 h-100 border-0 shadow-sm">
+        <img id="mainProductImage" src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" class="img-fluid mb-3 rounded" alt="Main Product">
+        <div class="d-flex justify-content-around gap-2 flex-wrap">
+          <button id="addToCartBtn" class="btn btn-primary flex-grow-1" onclick="addToCart()">Add to Cart</button>
+          <button id="productLikeBtn" class="btn btn-outline-danger flex-grow-1" onclick="toggleProductLike()">❤️ Like</button>
+          <button class="btn btn-success flex-grow-1" onclick="initiatePayment()">Buy</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="card p-3 h-100 border-0 shadow-sm">
+        <h2 id="productTitle" class="card-title">Levi's Jeans</h2>
+        <p class="card-text fs-5 fw-bold text-success" id="productPrice">₹2,319 <span class="old-price text-muted text-decoration-line-through fw-normal">₹2,899</span> <span class="text-success">20% OFF</span></p>
+        <p class="card-text text-warning fs-4" id="productRating">★★★★☆</p>
+        <div class="d-flex gap-2 mb-3">
+          <select id="sizeSelect1" class="form-select">
+            <option>Size</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select>
+          <select id="qtySelect1" class="form-select">
+            <option>Qty</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+          </select>
+        </div>
+        <h5 class="mb-2">Product Details:</h5>
+        <ul id="productSpecs" class="list-unstyled mb-3">
+          <li>Fit: Regular</li>
+          <li>Length: Full</li>
+          <li>Fabric: Denim</li>
+          <li>Sold by: Levi's</li>
+        </ul>
+        <h5 class="mb-2">Customer Reviews</h5>
+        <div id="reviews">
+          <p class="mb-1"><strong>John Doe:</strong> Great product, fits perfectly!</p>
+          <p class="mb-0"><strong>Jane Smith:</strong> Good quality denim, highly recommend.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="cartItems">
+        Your cart is empty.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="initiatePayment()">Proceed to Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="wishlistModal" tabindex="-1" aria-labelledby="wishlistModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="wishlistModalLabel">Your Wishlist</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="wishlistItems">
+        Your wishlist is empty.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alert payment-message mt-3 text-center" id="paymentMessage" style="display:none;" role="alert"></div>
+
+<footer class="bg-light text-center text-lg-start mt-5 shadow-sm">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase">NAAS E-commerce</h5>
+        <p>
+          Your one-stop shop for all your needs. From clothing to home appliances, we've got you covered.
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Links</h5>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">About Us</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Contact</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Connect</h5>
+        <ul class="list-unstyled mb-0">
+          <li>
+            <a href="#!" class="text-dark">Facebook</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Twitter</a>
+          </li>
+          <li>
+            <a href="#!" class="text-dark">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center p-3 text-muted" style="background-color: rgba(0, 0, 0, 0.05);">
+    © <span id="currentYear"></span> NAAS E-commerce. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Homepage.js"></script>
+</body>
+</html>

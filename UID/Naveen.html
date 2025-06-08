@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .background {
+            height: 100vh;
+            background-image: url("https://th.bing.com/th/id/OIP.YbGJC3mf3R_b2LkS8AYoGQHaEK?rs=1&pid=ImgDetMain");
+            background-size: cover;
+            padding: 50px;
+            color: black;
+            background-size: cover;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .profile-pic {
+        border-radius: 30px;
+        height: 25vh;
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .background {
+                background-color: lightblue;
+                background-image: none;
+                background-size: cover;
+            }
+            .row {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-pic {
+                height: 20vh;
+                margin-top: 10px;
+            }
+            .social-links {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="row">
+            <div>
+                <h1>Naveen Raj R</h1>
+                <p style="font-size: 20px;">B.Tech Student at Amrita Vishwa Vidyapeetham, Amritapuri</p>
+                <ul>
+                    <li>📱 +91 9846342091</li>
+                    <li>📧 naveenraj96951@gmail.com</li>
+                    <li>📌 Chavara</li>
+                </ul>
+            </div>
+            <img src="naveen.jpg" class="profile-pic" style="border-radius: 30px; height: 25vh;">
+        </div>
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/naveen-raj-57573a334?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png"  style="height: 50px; margin-right: 15px;">
+            </a>
+            <a href="https://www.instagram.com/naveen_r_a_j_?igsh=c3E3cGo5c2dhMzhv">
+                <img src="https://th.bing.com/th/id/OIP.2spOcwGpwKFSn-ZDDhdeIgHaHd?rs=1&pid=ImgDetMain"  style="height: 50px; margin-right: 15px;">
+            </a>
+        </div>
+        
+        <div class="content">
+            <h2 style="text-decoration: underline;">Education</h2>
+            <ul>
+                <li>Passed 10th from GVHSS Kottankkulangara with 100% marks</li>    
+                <li>Passed 12th from GVHSS Kottankkulangara with 91% marks</li> 
+                <li>First-year student at AIE(A) batch</li>
+                <li>1st Semester SGPA: 8.08</li>
+            </ul>
+            
+            <h2 style="text-decoration: underline;">Coding languages known</h2>
+            <ul>
+                <li>C Programming</li>
+                <li>HTML & CSS</li>
+                <li>Java</li>
+            </ul>
+            
+            <h2 style="text-decoration: underline;">Skills Overview</h2>
+            <table>
+                <tr>
+                    <th>Skill</th>
+                    <th>Proficiency Level</th>
+                </tr>
+                <tr>
+                    <td>C Programming</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>HTML & CSS</td>
+                    <td>Advanced</td>
+                </tr>
+                <tr>
+                    <td>Java</td>
+                    <td>Intermediate</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
