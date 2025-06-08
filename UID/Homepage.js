@@ -253,15 +253,7 @@ function toggleProductLike() {
   updateNavbarWishlistButton(); // Update general wishlist button in navbar
 }
 
-// REMOVED old toggleLike function as it's no longer needed for the navbar button
-// function toggleLike(button) {
-//   button.classList.toggle('liked');
-//   if (button.classList.contains('liked')) {
-//     alert("You've toggled the general wishlist icon. See individual products for specific liked status.");
-//   } else {
-//     alert("You've toggled the general wishlist icon off.");
-//   }
-// }
+
 
 function updateLikeButton() {
   const likeBtn = document.getElementById('productLikeBtn');
