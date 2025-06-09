@@ -5,12 +5,12 @@ UIDPROJECT
 
 This project was collaboratively developed by a dedicated team of four members, each contributing their unique skills to bring the website to life:
 
-Adhithyan S – Responsible for designing and drawing the overall structure and layout of the website, including the navigation flow and page hierarchy. His planning ensured a user-friendly and intuitive interface. He also contributed to developing the HTML structure of the website.
+Adhithyan S – Responsible for designing and drawing the overall structure and layout of the website, including the navigation flow and page hierarchy. His planning ensured a user-friendly and intuitive interface. He also developed the Builder Info page, handling its HTML, CSS, and JavaScript components.
 
-Shruthik Binduraj – Handled the JavaScript components of the site, implementing functionalities such as  form validations, cart operations, and interactivity.
+Shruthik Binduraj – Implemented the Home page JavaScript functionalities, including interactive features, and cart operations, enhancing the dynamic behavior of the site.
 
-Abhinav P Madhu – Developed the HTML structure of the web pages, creating the skeleton of the site including headers, product sections, forms, and navigation elements.
+Abhinav P Madhu – Created the Login page, developing its complete HTML, CSS, and JavaScript structure to ensure secure and user-friendly access.
 
-Naveen Raj R – Took charge of CSS styling, making the website visually appealing and responsive. He ensured consistent design, color schemes, layout alignment, and responsiveness across devices.
+Naveen Raj R – Developed the Home page layout using HTML and CSS. He was also responsible for the visual styling of the website, ensuring responsiveness, consistent design, and clean layout across all devices.
 
 This collaborative effort showcases each member’s contribution toward building a user-centered and aesthetically pleasing e-commerce platform.
