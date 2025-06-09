@@ -350,9 +350,9 @@ function removeFromWishlist(productId) {
     if (productToRemove) {
         likedProducts.delete(productId);
         alert(`${productToRemove.title} removed from your wishlist.`);
-        viewWishlist(); // Refresh wishlist display in modal
-        updateLikeButton(); // Update individual product like button if it's the current product
-        updateNavbarWishlistButton(); // Update navbar button state
+        viewWishlist(); 
+        updateLikeButton(); 
+        updateNavbarWishlistButton();
     }
 }
 
