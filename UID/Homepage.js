@@ -168,8 +168,7 @@ function loadProduct(id, category) {
 
   document.getElementById('mainProductImage').src = product.image;
   document.getElementById('productTitle').textContent = product.title;
-  
-  // Update price display with strikethrough for old price
+ 
   document.getElementById('productPrice').innerHTML = `₹${product.price.toLocaleString()} <span class="old-price text-muted">₹${product.oldPrice.toLocaleString()}</span> <span class="text-success">${product.discount}% OFF</span>`;
   
   document.getElementById('productRating').textContent = product.rating;
@@ -193,7 +192,7 @@ function loadProduct(id, category) {
   document.getElementById('sizeSelect1').selectedIndex = 0;
   document.getElementById('qtySelect1').selectedIndex = 0;
 
-  updateLikeButton(); // Updates the individual product's like button
+  updateLikeButton(); 
   updateAddToCartButton();
 }
 
@@ -235,8 +234,8 @@ function removeFromCart(productId) {
   if (productToRemove) {
     cart = cart.filter(item => item.id !== productId);
     alert(`${productToRemove.title} removed from your cart.`);
-    viewCart(); // Refresh cart display
-    updateAddToCartButton(); // Update add to cart button if current product was removed
+    viewCart(); 
+    updateAddToCartButton(); 
   }
 }
 
@@ -249,8 +248,8 @@ function toggleProductLike() {
     likedProducts.add(product.id);
     alert(`${product.title} added to your wishlist!`);
   }
-  updateLikeButton(); // Update individual product like button text/style
-  updateNavbarWishlistButton(); // Update general wishlist button in navbar
+  updateLikeButton(); 
+  updateNavbarWishlistButton(); 
 }
 
 
@@ -260,10 +259,10 @@ function updateLikeButton() {
   const product = products[currentProductIndex];
   if (likedProducts.has(product.id)) {
     likeBtn.classList.add('liked');
-    likeBtn.textContent = '❤️ Liked'; // Change text to "Liked"
+    likeBtn.textContent = '❤️ Liked'; 
   } else {
     likeBtn.classList.remove('liked');
-    likeBtn.textContent = '❤️ Like'; // Change text back to "Like"
+    likeBtn.textContent = '❤️ Like';
   }
 }
 
@@ -295,7 +294,7 @@ function initiatePayment() {
     messageDiv.classList.remove('alert-success');
     messageDiv.classList.add('alert-warning');
     messageDiv.style.display = "block";
-    // Hide payment message after a few seconds
+    
     setTimeout(() => {
         messageDiv.style.display = "none";
     }, 3000);
@@ -305,24 +304,23 @@ function initiatePayment() {
   messageDiv.classList.add('alert-success');
   messageDiv.textContent = "Payment process initiated. Thank you for your purchase!";
   messageDiv.style.display = "block";
-  cart = []; // Clear the cart after successful payment initiation
-  updateAddToCartButton(); // Update the button state for the current product
+  cart = []; 
+  updateAddToCartButton(); 
   
-  // Hide the cart modal if it's open
+  
   const modalEl = document.getElementById('cartModal');
   const modalInstance = bootstrap.Modal.getInstance(modalEl);
   if (modalInstance) modalInstance.hide();
   
-  // Re-render cart display to show it's empty
+  
   viewCart(); 
 
-  // Hide payment message after a few seconds
   setTimeout(() => {
       messageDiv.style.display = "none";
   }, 3000);
 }
 
-// New function to view wishlist items in a modal
+
 function viewWishlist() {
   const wishlistItemsDiv = document.getElementById('wishlistItems');
   if (likedProducts.size === 0) {
@@ -346,7 +344,7 @@ function viewWishlist() {
   wishlistModal.show();
 }
 
-// Function to remove an item directly from the wishlist modal
+
 function removeFromWishlist(productId) {
     const productToRemove = products.find(p => p.id === productId);
     if (productToRemove) {
@@ -368,8 +366,7 @@ function searchProducts() {
   }
 }
 
-// Initialize on page load
 window.onload = function() {
-  loadProduct(0, 'clothing'); // Load the first product by default
-  updateNavbarWishlistButton(); // Ensure navbar wishlist button reflects initial state
+  loadProduct(0, 'clothing'); 
+  updateNavbarWishlistButton(); 
 }
