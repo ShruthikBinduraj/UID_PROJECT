@@ -215,3 +215,72 @@ input:valid {
 .continue-btn:hover {
   background-color: #0056b3;
 }
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-input {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .search-btn,
+  .wishlist-btn,
+  .cart-btn,
+  .home-btn,
+  .login-btn {
+    flex-grow: 1;
+    margin: 5px 2px;
+  }
+
+  .login-card {
+    padding: 15px;
+    margin: 0 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+    margin: 10% auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .search-btn,
+  .wishlist-btn,
+  .cart-btn,
+  .home-btn,
+  .login-btn {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
