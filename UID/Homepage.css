@@ -1,11 +1,11 @@
-/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
 }
 
-/* Navbar Customizations */
+
 .nav-container {
-  width: 100%; /* Ensures the container takes full width of its parent */
+  width: 100%; 
 }
 
 .logo {
@@ -15,18 +15,17 @@ body {
 }
 
 .search-group {
-  flex-grow: 1; /* Allows search bar to take available space */
+  flex-grow: 1; 
   max-width: 400px;
 }
 
 .search-btn {
-  border-left: none; /* Merges button with input visually */
+  border-left: none; 
 }
 
-/* Carousel Customizations */
 .carousel-img {
-  height: 400px; /* Fixed height for carousel images */
-  object-fit: cover; /* Ensures images cover the area without distortion */
+  height: 400px; 
+  object-fit: cover;
   object-position: center;
   border-radius: 15px;
 }
@@ -37,12 +36,11 @@ body {
   border-radius: 50%;
 }
 
-/* Tab Nav Customizations */
+
 .nav-tabs .nav-link {
   transition: all 0.3s ease;
 }
 
-/* Product Thumbnail Customizations */
 .thumbnail-img {
   height: 140px;
   object-fit: cover;
@@ -54,15 +52,15 @@ body {
   transform: scale(1.03);
 }
 
-/* Product Details Customizations */
+
 .product-details-row .card {
-  border: 1px solid #ccc; /* Custom border for product boxes */
+  border: 1px solid #ccc; 
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .product-details-row #mainProductImage {
   max-height: 400px;
-  object-fit: contain; /* Keeps image aspect ratio */
+  object-fit: contain;
 }
 
 .price {
@@ -71,11 +69,11 @@ body {
   font-weight: bold;
 }
 
-/* OVERRIDE FOR OLD PRICE */
+
 .old-price {
   text-decoration: line-through;
-  color: #6c757d; /* text-muted color */
-  font-weight: normal; /* fw-normal */
+  color: #6c757d; 
+  font-weight: normal;
 }
 
 
@@ -84,14 +82,14 @@ body {
   font-size: 1.4rem;
 }
 
-/* Liked State for Buttons */
+
 .liked {
   color: red !important;
-  background-color: #ffebeb !important; /* Light red background for liked state */
+  background-color: #ffebeb !important; 
   border-color: red !important;
 }
 
-/* Cart Item Display in Modal */
+
 .cart-item-display {
   border-bottom: 1px dashed #eee;
   padding-bottom: 5px;

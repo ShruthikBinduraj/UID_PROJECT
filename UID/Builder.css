@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,7 +6,6 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar Styles */
 .navbar {
   background-color: #f8f9fa;
   padding: 10px 20px;
